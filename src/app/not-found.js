@@ -2,9 +2,11 @@
 
 export default function GlobalError() {
   return (
-    <html>
+    <html lang="en">
       <body>
-        <h2>This is a custom 404 page</h2>
+        <div className="App">
+          <h2>This is a custom 404 page</h2>
+        </div>
       </body>
     </html>
   );
