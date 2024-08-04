@@ -1,3 +1,5 @@
-const HOST = 'http://localhost:3000';
+import 'dotenv/config';
+
+const { HOST } = process.env;
 
 export default HOST;
