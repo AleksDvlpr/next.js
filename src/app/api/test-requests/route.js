@@ -16,6 +16,12 @@ export async function PUT(request) {
   });
 }
 
+export async function PATCH(request) {
+  return new Response(JSON.stringify({ result: true, method: 'PATCH' }), {
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
 export async function DELETE(request) {
   return new Response(JSON.stringify({ result: true, method: 'DELETE' }), {
     headers: { 'Content-Type': 'application/json' },
