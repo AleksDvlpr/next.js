@@ -10,11 +10,15 @@
     "format:write": "npx prettier --write \"./src/**/*.js\""
   },
   "dependencies": {
+    "accept-language": "^3.0.20",
     "antd": "^5.19.3",
     "dotenv": "^16.4.5",
+    "i18next": "^23.14.0",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^15.0.1",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

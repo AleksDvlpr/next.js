@@ -1,5 +1,5 @@
 import RequestButtons from '@/app/client/RequestButtons';
-import styles from '@/app/styles.module.css';
+import styles from '@/app/[lng]/styles.module.css';
 
 export default async function Home() {
   return (

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import HOST from '@/app/constants';
+import HOST from '@/app/[lng]/constants';
 import styles from './styles.module.css';
 
 /* Управление state-management
@@ -15,7 +15,7 @@ async function fetchUsers() {
   return res.json();
 }
 
-export default async function Home() {
+export default async function Home({ params: { lng } }) {
   const users = await fetchUsers();
 
   return (
@@ -24,7 +24,7 @@ export default async function Home() {
       <ul>
         {users.map((user) => (
           <li className={styles.listItem} key={user.id}>
-            {user.id}. <Link href={`/user/${user.id}`}>{user.name}</Link>
+            {user.id}. <Link href={`/${lng}/user/${user.id}`}>{user.name}</Link>
           </li>
         ))}
       </ul>
