@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { useTranslation } from '@/app/i18n';
 import BackButton from '@/app/client/BackButton';
+import Div from '@/app/client/Div';
 import HOST from '@/app/[lng]/constants';
 import styles from '@/app/[lng]/styles.module.css';
 
@@ -25,6 +26,8 @@ export default async function User({ params: { id, lng } }) {
         {t('user')}: {user?.name}
       </h1>
       <p>Email: {user?.email}</p>
+      <br />
+      <Div />
       <br />
       <BackButton back={t('back')} />
     </div>

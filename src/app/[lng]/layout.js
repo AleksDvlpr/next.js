@@ -2,9 +2,8 @@ import { Inter } from 'next/font/google';
 import { dir } from 'i18next';
 import StyledComponentsRegistry from '../lib/registry';
 import { languages } from '../i18n/settings';
-import { ReduxProvider } from '../store/Provider';
+import Provider from '@/app/lib/store/Provider';
 import './globals.css';
-import { Provider } from 'react-redux';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,11 +20,11 @@ function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <ReduxProvider>
+        <Provider>
+          <StyledComponentsRegistry>
             <div className="App">{children}</div>
-          </ReduxProvider>
-        </StyledComponentsRegistry>
+          </StyledComponentsRegistry>
+        </Provider>
       </body>
     </html>
   );
